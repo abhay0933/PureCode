@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+
+@import "flatpickr/dist/flatpickr.min.css";
+@import "./assets/css/_navbar.css";
+@import "./assets/css/_form.css";
+@import "./assets/css/_simplebar.css";
+@import "./assets/css/_flatpickr.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  @apply relative scroll-smooth;
+}
+
+body {
+  font-size: 15px;
+  -webkit-tap-highlight-color: transparent;
+  @apply font-poppins overflow-x-hidden antialiased text-base bg-white text-default-800 dark:bg-default-50;
+}
+a,
+button {
+  @apply focus-visible:outline outline-offset-2  outline-1 outline-primary;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+::marker {
+  @apply opacity-40;
+}
+
+@media print {
+  .hide-in-print {
+    display: none;
+  }
+}
+
+/* ==== React Select ==== */
+
+.react-select__control {
+  @apply cursor-pointer py-2.5 px-4;
+}
+
+.react-select__menu {
+  @apply bg-white drop-shadow-lg rounded-lg overflow-hidden !start-0 mt-2 dark:bg-default-100;
+}
+.react-select__menu .react-select__menu-list {
+  @apply py-1;
+}
+
+.react-select__menu .react-select__menu-list .react-select__option {
+  @apply py-1.5 px-4 hover:bg-primary/10 hover:text-primary cursor-pointer;
+}
+
+/* ===== Scroll bar ===== */
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-lg bg-transparent;
+}
+
+::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full hover:bg-primary-500;
+}
